@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+
+    <title>Sign In</title>
+
+    <link href="static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://getbootstrap.com/examples/signin/signin.css" rel="stylesheet">
+    <script src="./Signin Template for Bootstrap_files/ie-emulation-modes-warning.js"></script>
+        
+    <link rel="stylesheet" type="text/css" href="static/css/styles.css">
+</head>
+<body>
+<div class="container">
+    <form class="form-signin" action="" method="POST">
+        <h2 class="form-signin-heading">Please Sign In</h2>
+        {{ signinform.email(placeholder="Email",id="inputEmail", class="form-control", autofocus="") }}
+        {{ signinform.password(placeholder="Password",id="inputPassword", class="form-control", required="") }}
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        {{ signinform.submit(class="btn btn-lg btn-primary btn-block")}}
+              <div class="noacc">
+        Don't have an account! <a href="signup">Sign Up Here</a>
+      </div>
+      </form>
+
+</div>
+
+    <script src="./Signin Template for Bootstrap_files/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>

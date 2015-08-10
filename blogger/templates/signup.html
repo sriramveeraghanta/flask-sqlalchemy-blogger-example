@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+
+    <title>Sign Up</title>
+
+    <link href="static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://getbootstrap.com/examples/signin/signin.css" rel="stylesheet">
+    <script src="./Signin Template for Bootstrap_files/ie-emulation-modes-warning.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="static/css/styles.css">
+</head>
+<body>
+<div class="container">
+    <form class="form-signin" action="" method="POST">
+        <h2 class="form-signin-heading">Please Sign Up</h2>
+       {{ signupform.firstname(id="inputEmail", class="form-control", autofocus="",placeholder="First Name")}}
+       {{ signupform.lastname(id="inputEmail", class="form-control", autofocus="",placeholder="Last Name")}}
+        {{ signupform.username(id="inputEmail", class="form-control", autofocus="",placeholder="User Name")}}
+        {{ signupform.email(placeholder="Email",id="inputEmail", class="form-control", autofocus="") }}
+        {{ signupform.password(placeholder="Password",id="inputPassword", class="form-control", required="") }}
+        {{ signupform.submit(class="btn btn-lg btn-primary btn-block")}}
+        <div class="noacc">Already have an account! <a class="signup" href="/signin">Sign In Here</a></div>      
+    </form>
+
+      
+    </div>
+
+    <script src="./Signin Template for Bootstrap_files/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>

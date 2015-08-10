@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>About</title>
+
+	<link href="../static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="../static/bootstrap/css/bootstrap-theme.min.css">
+	<script src="../static/bootstrap/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../static/css/styles.css">
+	<style type="text/css">
+	  #us{
+		float: right;
+		margin-right: 20px;
+		margin-top: 10px;
+	  }
+	  #us h3{
+		margin: 0 0 0 0;
+	  }
+	  table tr{
+		padding-top: 10px;
+
+	  }
+	  table tr td{
+		padding-left: 20px;
+		font-size: 22px;
+
+	  }
+	  table tr td h4{
+		font-weight: bold;
+	  }
+	  #signout{
+		width: 100px;
+		height: 20px;
+	  }
+	  #signout a{
+		padding: 2px 0px 2px 20px;
+	  }
+	  .edit_pro{
+	  	width: 10%;
+	  	float: right;
+	  }
+	  .row{
+	  	background-color: white;
+	  }
+	</style>
+  </head>
+<body>
+<div id="us">
+<ul class="nav nav-pills">
+  <li><h3>{{session['current_user']}} &nbsp</h3></li>
+  <li role="presentation" class="active" id="signout"><a href="/logout">Sign Out</a></li>
+ </ul> 
+</div>
+<div>
+<ul class="nav nav-tabs">
+  <li role="presentation"><a href="/posts">Posts</a></li>
+	<li role="presentation"><a href="/add">Add Posts</a></li>
+  <li role="presentation"><a href="/friends">Friends</a></li>
+  <li role="presentation"><a href="/finddriends">Find Friends</a></li>
+  <li role="presentation" class="active"><a href="">About</a></li>
+</ul>
+</div>
+
+<div class="edit_pro">
+	<a class="btn btn-lg btn-primary btn-block">Edit Profile</a>
+</div>
+
+
+<div class="row">
+	<div class="col-md-8">
+  		<table align="right">
+			<tr>
+	  			<td> <h4>First Name</h4></td>
+	  			<td>{{user.firstname}}</td>
+			</tr>
+			<tr>
+	  			<td> <h4>Last Name</h4></td>
+	  			<td>{{user.lastname}}</td>
+			</tr>
+			<tr>
+	  			<td><h4>User Name</h4></td>
+	  			<td>{{user.username}}</td>
+			</tr>
+			<tr>
+	  			<td><h4>Email</h4></td>
+	  			<td>{{user.email}}</td>
+			</tr>
+			<tr>
+	  			<td><h4>Password</h4></td>
+	  			<td>**********</td>
+			</tr>
+  		</table>
+	</div>
+</div>
+	
+</body>
+</html>
